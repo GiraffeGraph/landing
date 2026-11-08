@@ -16,22 +16,22 @@ const reports = [
   {
     title: "Meeting #1",
     type: "Supervisor meeting report",
-    href: "/meeting-1/",
+    href: "/downloads/meeting-1.pdf",
   },
   {
     title: "Meeting #2",
     type: "Supervisor meeting report",
-    href: "/meeting-2/",
+    href: "/downloads/meeting-2.pdf",
   },
   {
     title: "Project Proposal",
     type: "CSE 491 project proposal",
-    href: "/project-proposal/",
+    href: "/downloads/project-proposal.pdf",
   },
   {
     title: "TÜBİTAK 2209-A",
     type: "Application evidence",
-    href: "/tubitak-2209a/",
+    href: "/downloads/tubitak-2209a.pdf",
   },
 ];
 
@@ -56,31 +56,32 @@ export default function ReportsPage() {
             Public-safe copies of submitted project documents. Personal identifiers and signatures are removed.
           </p>
 
-          <div className="mt-12 grid gap-4 sm:grid-cols-2">
+          <div className="mt-10 grid gap-3 sm:grid-cols-2">
             {reports.map((report, index) => (
               <a
                 key={report.href}
                 href={report.href}
-                className="group rounded-[18px] border border-[#253D5A] bg-gradient-to-br from-[#1D2E47] to-[#15243A] p-6 transition duration-200 hover:-translate-y-1 hover:border-[#E9AE3F] hover:shadow-[0_18px_48px_rgba(0,0,0,0.35)]"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-4 rounded-[14px] border border-[#253D5A] bg-gradient-to-br from-[#1D2E47] to-[#15243A] p-4 transition duration-200 hover:-translate-y-0.5 hover:border-[#E9AE3F] hover:shadow-[0_12px_32px_rgba(0,0,0,0.3)]"
               >
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-[rgba(233,174,63,0.25)] bg-[rgba(233,174,63,0.1)]">
-                    <FileText className="text-[#E9AE3F]" size={21} aria-hidden="true" />
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[10px] border border-[rgba(233,174,63,0.25)] bg-[rgba(233,174,63,0.1)]">
+                  <FileText className="text-[#E9AE3F]" size={19} aria-hidden="true" />
+                </div>
+
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-center gap-2">
+                    <h2 className="truncate text-base font-semibold text-white">{report.title}</h2>
+                    <span className="font-mono text-[10px] text-[#5A6A7E]">0{index + 1}</span>
                   </div>
-                  <span className="font-mono text-xs text-[#5A6A7E]">0{index + 1}</span>
+                  <p className="mt-0.5 truncate text-xs text-[#A7ADB3]">{report.type}</p>
                 </div>
 
-                <h2 className="mt-8 text-xl font-semibold text-white">{report.title}</h2>
-                <p className="mt-2 text-sm text-[#A7ADB3]">{report.type}</p>
-
-                <div className="mt-7 flex items-center gap-2 text-sm font-semibold text-[#E9AE3F]">
-                  Open report
-                  <ArrowUpRight
-                    size={16}
-                    className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                    aria-hidden="true"
-                  />
-                </div>
+                <ArrowUpRight
+                  size={17}
+                  className="shrink-0 text-[#E9AE3F] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  aria-hidden="true"
+                />
               </a>
             ))}
           </div>

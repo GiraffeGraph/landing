@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Download, FileText } from "lucide-react";
+import { ExternalLink, FileText } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 
 const assignments = {
@@ -12,7 +12,7 @@ const assignments = {
   "meeting-2": {
     title: "Meeting #2",
     description: "CSE 491 supervisor meeting report.",
-    file: "meeting-2.docx",
+    file: "meeting-2.pdf",
   },
   "project-proposal": {
     title: "Project Proposal",
@@ -111,19 +111,18 @@ export default async function AssignmentPage({
                 </div>
                 <div>
                   <p className="font-semibold text-white">{item.title}</p>
-                  <p className="mt-1 text-sm text-[#A7ADB3]">
-                    {item.file.endsWith(".docx") ? "Word document" : "PDF document"}
-                  </p>
+                  <p className="mt-1 text-sm text-[#A7ADB3]">PDF document</p>
                 </div>
               </div>
 
               <a
                 href={`/downloads/${item.file}`}
-                download
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-[10px] bg-gradient-to-br from-[#E9AE3F] to-[#C4893A] px-6 py-3 font-semibold text-[#1D2E47] shadow-[0_0_24px_rgba(233,174,63,0.3)] transition hover:scale-[1.02] hover:shadow-[0_0_36px_rgba(233,174,63,0.45)]"
               >
-                <Download size={18} aria-hidden="true" />
-                Download report
+                <ExternalLink size={18} aria-hidden="true" />
+                Open PDF
               </a>
             </div>
           </div>
