@@ -12,7 +12,7 @@ const assignments = {
   "meeting-2": {
     title: "Meeting #2",
     description: "CSE 491 supervisor meeting report.",
-    file: "meeting-2.pdf",
+    file: "meeting-2.docx",
   },
   "project-proposal": {
     title: "Project Proposal",
@@ -111,7 +111,9 @@ export default async function AssignmentPage({
                 </div>
                 <div>
                   <p className="font-semibold text-white">{item.title}</p>
-                  <p className="mt-1 text-sm text-[#A7ADB3]">PDF document</p>
+                  <p className="mt-1 text-sm text-[#A7ADB3]">
+                    {item.file.endsWith(".docx") ? "Word document" : "PDF document"}
+                  </p>
                 </div>
               </div>
 
