@@ -41,7 +41,7 @@ const reports = [
   {
     title: "Midterm Report",
     type: "CSE 491 midterm report",
-    href: null,
+    href: "/downloads/midterm-report.pdf",
   },
   {
     title: "Meeting #4",
