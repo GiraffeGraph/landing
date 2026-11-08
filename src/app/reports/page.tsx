@@ -41,7 +41,7 @@ const reports = [
   {
     title: "Midterm Report",
     type: "CSE 491 midterm report",
-    href: "/downloads/midterm-report-2026-11-08-5da2b030d5.pdf",
+    href: "/downloads/midterm-report-2026-11-08-7fe35d5178.pdf",
   },
   {
     title: "Meeting #4",
@@ -73,7 +73,7 @@ export default function ReportsPage() {
           <p className="label mb-5 text-[#E9AE3F]">CSE 491 · GiraffeGraph</p>
           <h1 className="heading-xl mb-5">Project Reports</h1>
           <p className="body-l max-w-2xl text-[#A7ADB3]">
-            Public-safe copies of submitted project documents. Personal identifiers and signatures are removed.
+            Public copies of project documents and supervisor meeting reports.
           </p>
 
           <div className="mt-10 grid gap-3 sm:grid-cols-2">

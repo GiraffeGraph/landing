@@ -32,7 +32,7 @@ const assignments = {
   "midterm-report": {
     title: "Midterm Report",
     description: "GiraffeGraph CSE 491 midterm report.",
-    file: "midterm-report-2026-11-08-5da2b030d5.pdf",
+    file: "midterm-report-2026-11-08-7fe35d5178.pdf",
   },
   "meeting-4": {
     title: "Meeting #4",
