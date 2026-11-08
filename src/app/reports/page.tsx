@@ -36,7 +36,7 @@ const reports = [
   {
     title: "Meeting #3",
     type: "Supervisor meeting report",
-    href: null,
+    href: "/downloads/meeting-3-2026-10-30-9eff6e25c6.pdf",
   },
   {
     title: "Midterm Report",
