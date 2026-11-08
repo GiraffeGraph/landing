@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowUpRight, FileText } from "lucide-react";
+import { ArrowUpRight, Clock3, FileText } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 
 export const metadata: Metadata = {
@@ -33,6 +33,26 @@ const reports = [
     type: "Application evidence",
     href: "/downloads/tubitak-2209a.pdf",
   },
+  {
+    title: "Meeting #3",
+    type: "Supervisor meeting report",
+    href: null,
+  },
+  {
+    title: "Midterm Report",
+    type: "CSE 491 midterm report",
+    href: null,
+  },
+  {
+    title: "Meeting #4",
+    type: "Supervisor meeting report",
+    href: null,
+  },
+  {
+    title: "Meeting #5",
+    type: "Supervisor meeting report",
+    href: null,
+  },
 ];
 
 export default function ReportsPage() {
@@ -57,33 +77,70 @@ export default function ReportsPage() {
           </p>
 
           <div className="mt-10 grid gap-3 sm:grid-cols-2">
-            {reports.map((report, index) => (
-              <a
-                key={report.href}
-                href={report.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-4 rounded-[14px] border border-[#253D5A] bg-gradient-to-br from-[#1D2E47] to-[#15243A] p-4 transition duration-200 hover:-translate-y-0.5 hover:border-[#E9AE3F] hover:shadow-[0_12px_32px_rgba(0,0,0,0.3)]"
-              >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[10px] border border-[rgba(233,174,63,0.25)] bg-[rgba(233,174,63,0.1)]">
-                  <FileText className="text-[#E9AE3F]" size={19} aria-hidden="true" />
-                </div>
-
-                <div className="min-w-0 flex-1">
-                  <div className="flex items-center gap-2">
-                    <h2 className="truncate text-base font-semibold text-white">{report.title}</h2>
-                    <span className="font-mono text-[10px] text-[#5A6A7E]">0{index + 1}</span>
+            {reports.map((report, index) => {
+              const content = (
+                <>
+                  <div
+                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-[10px] border ${
+                      report.href
+                        ? "border-[rgba(233,174,63,0.25)] bg-[rgba(233,174,63,0.1)]"
+                        : "border-[#253D5A] bg-[#17263A]"
+                    }`}
+                  >
+                    <FileText
+                      className={report.href ? "text-[#E9AE3F]" : "text-[#5A6A7E]"}
+                      size={19}
+                      aria-hidden="true"
+                    />
                   </div>
-                  <p className="mt-0.5 truncate text-xs text-[#A7ADB3]">{report.type}</p>
-                </div>
 
-                <ArrowUpRight
-                  size={17}
-                  className="shrink-0 text-[#E9AE3F] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                  aria-hidden="true"
-                />
-              </a>
-            ))}
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center gap-2">
+                      <h2 className={`truncate text-base font-semibold ${report.href ? "text-white" : "text-[#718096]"}`}>
+                        {report.title}
+                      </h2>
+                      <span className="font-mono text-[10px] text-[#5A6A7E]">0{index + 1}</span>
+                    </div>
+                    <p className={`mt-0.5 truncate text-xs ${report.href ? "text-[#A7ADB3]" : "text-[#4B5D72]"}`}>
+                      {report.type}
+                    </p>
+                  </div>
+
+                  {report.href ? (
+                    <ArrowUpRight
+                      size={17}
+                      className="shrink-0 text-[#E9AE3F] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                      aria-hidden="true"
+                    />
+                  ) : (
+                    <span className="flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-wider text-[#5A6A7E]">
+                      <Clock3 size={14} aria-hidden="true" />
+                      Pending
+                    </span>
+                  )}
+                </>
+              );
+
+              return report.href ? (
+                <a
+                  key={report.title}
+                  href={report.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-4 rounded-[14px] border border-[#253D5A] bg-gradient-to-br from-[#1D2E47] to-[#15243A] p-4 transition duration-200 hover:-translate-y-0.5 hover:border-[#E9AE3F] hover:shadow-[0_12px_32px_rgba(0,0,0,0.3)]"
+                >
+                  {content}
+                </a>
+              ) : (
+                <div
+                  key={report.title}
+                  aria-disabled="true"
+                  className="flex cursor-not-allowed items-center gap-4 rounded-[14px] border border-[#1D3048] bg-[#132136] p-4 opacity-70"
+                >
+                  {content}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
