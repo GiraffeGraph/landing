@@ -7,12 +7,12 @@ const assignments = {
   "meeting-1": {
     title: "Meeting #1",
     description: "CSE 491 supervisor meeting report.",
-    file: "meeting-1.pdf",
+    file: "meeting-1-2026-10-02-b4dfe63fdb.pdf",
   },
   "meeting-2": {
     title: "Meeting #2",
     description: "CSE 491 supervisor meeting report.",
-    file: "meeting-2.pdf",
+    file: "meeting-2-2026-10-16-156b47b4a6.pdf",
   },
   "project-proposal": {
     title: "Project Proposal",

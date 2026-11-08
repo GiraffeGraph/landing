@@ -16,12 +16,12 @@ const reports = [
   {
     title: "Meeting #1",
     type: "Supervisor meeting report",
-    href: "/downloads/meeting-1.pdf",
+    href: "/downloads/meeting-1-2026-10-02-b4dfe63fdb.pdf",
   },
   {
     title: "Meeting #2",
     type: "Supervisor meeting report",
-    href: "/downloads/meeting-2.pdf",
+    href: "/downloads/meeting-2-2026-10-16-156b47b4a6.pdf",
   },
   {
     title: "Project Proposal",
