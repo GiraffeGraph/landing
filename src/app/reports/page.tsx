@@ -43,16 +43,6 @@ const reports = [
     type: "CSE 491 midterm report",
     href: "/downloads/midterm-report-2026-11-08-7fe35d5178.pdf",
   },
-  {
-    title: "Meeting #4",
-    type: "Supervisor meeting report",
-    href: "/downloads/meeting-4-2026-11-13-a19be20f5a.pdf",
-  },
-  {
-    title: "Meeting #5",
-    type: "Supervisor meeting report",
-    href: "/downloads/meeting-5-2026-11-27-cfa6f98ad5.pdf",
-  },
 ];
 
 export default function ReportsPage() {

@@ -1,0 +1,18 @@
+{
+  "meeting-4": {
+    "title": "Meeting #4",
+    "description": "CSE 491 supervisor meeting report.",
+    "date": "2026-11-13",
+    "file": "meeting-4-2026-11-13-a19be20f5a.pdf",
+    "href": "/downloads/meeting-4-2026-11-13-a19be20f5a.pdf",
+    "published": false
+  },
+  "meeting-5": {
+    "title": "Meeting #5",
+    "description": "CSE 491 supervisor meeting report.",
+    "date": "2026-11-27",
+    "file": "meeting-5-2026-11-27-cfa6f98ad5.pdf",
+    "href": "/downloads/meeting-5-2026-11-27-cfa6f98ad5.pdf",
+    "published": false
+  }
+}
