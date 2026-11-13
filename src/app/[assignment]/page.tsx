@@ -34,6 +34,11 @@ const assignments = {
     description: "GiraffeGraph CSE 491 midterm report.",
     file: "midterm-report-2026-11-08-7fe35d5178.pdf",
   },
+  "meeting-4": {
+    title: "Meeting #4",
+    description: "CSE 491 supervisor meeting report.",
+    file: "meeting-4-2026-11-13-a19be20f5a.pdf",
+  },
 } as const;
 
 type AssignmentSlug = keyof typeof assignments;
